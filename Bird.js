@@ -8,6 +8,7 @@ class Bird {
       this.body = Bodies.rectangle(x, y, 50, 50, options);
       this.width = 50;
       this.height = 50;
+      this.image=loadImage("sprites/bird.png")
       World.add(world, this.body);
     };
     display(){
@@ -22,8 +23,8 @@ class Bird {
       strokeWeight(3);
       stroke('blue')
       fill('red')
-      rectMode(CENTER)
-      rect(0, 0, this.width, this.height);
+     imageMode(CENTER)
+    image(this.image,0, 0, this.width, this.height);
       pop();
     };
   };

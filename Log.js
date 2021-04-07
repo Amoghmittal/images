@@ -9,6 +9,8 @@ class Log {
       this.width = 20;
       this.height = height;
       Matter.Body.setAngle(this.body, angle);
+      this.image=loadImage("sprites/wood2.png")
+    
       World.add(world, this.body);
     }
     display(){
@@ -17,11 +19,11 @@ class Log {
       push();
       translate(pos.x, pos.y);
       rotate(angle);
-      rectMode(CENTER);
+      imageMode(CENTER);
       strokeWeight(4);
       stroke("green");
       fill(255);
-      rect(0, 0, this.width, this.height);
+      image(this.image,0, 0, this.width, this.height);
       pop();
     }
   };
